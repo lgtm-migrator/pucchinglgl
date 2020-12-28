@@ -1,0 +1,13 @@
+{
+  "buildOptions": {
+    "clean": true
+  },
+  "mount": { "src": { "url": "/" } },
+  "experiments": {
+    "optimize": {
+      "bundle": true,
+      "minify": true,
+      "target": "esnext"
+    }
+  }
+}

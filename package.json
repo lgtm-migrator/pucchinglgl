@@ -1,0 +1,17 @@
+{
+  "name": "pucchinglgl",
+  "version": "1.0.0",
+  "private": true,
+  "main": "build/main.js",
+  "repository": "git@github.com:kou029w/pucchinglgl.git",
+  "author": "Kohei Watanabe <kou029w@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "snowpack": "^2.18.5",
+    "three": "^0.124.0"
+  },
+  "scripts": {
+    "dev": "snowpack dev",
+    "build": "snowpack build"
+  }
+}
