@@ -112,6 +112,7 @@ function main() {
   root.addEventListener("keydown", handleKeydown);
   root.addEventListener("touchstart", handleTouchmove, { passive: false });
   root.addEventListener("touchmove", handleTouchmove, { passive: false });
+  root.addEventListener("mousedown", handleMouseMove);
   root.addEventListener("mousedown", () => {
     root.addEventListener("mousemove", handleMouseMove);
   });
