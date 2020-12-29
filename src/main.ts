@@ -36,10 +36,6 @@ function render() {
   renderer.render(scene, camera);
 }
 
-function vibrate() {
-  if ("vibrate" in navigator) navigator.vibrate(100);
-}
-
 function tone(osc: Oscillator) {
   osc.start();
   osc.stop("+0.05");
@@ -50,7 +46,6 @@ function drawRect() {
   const [intersect] = raycaster.intersectObjects(panels);
   if (!intersect) return;
 
-  vibrate();
   try {
     // FIXME: Error: Start time must be strictly greater than previous start time.
     tone(intersect.object.userData.osc);
