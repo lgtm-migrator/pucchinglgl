@@ -40,7 +40,11 @@ function drawRect() {
   const [intersect] = raycaster.intersectObjects(panels);
   if (!intersect) return;
 
-  synth.triggerAttackRelease("C4", "16n");
+  try {
+    // FIXME: Error: Start time must be strictly greater than previous start time.
+    synth.triggerAttackRelease("C4", "16n");
+  } catch {}
+
   const color = pallet[randomInt(pallet.length - 1)];
   const geometry = new PlaneGeometry(1, 1);
   const material = new MeshBasicMaterial({ color });
