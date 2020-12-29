@@ -112,16 +112,16 @@ function main() {
   root.addEventListener("keydown", handleKeydown);
   root.addEventListener("touchstart", handleTouchmove, { passive: false });
   root.addEventListener("touchmove", handleTouchmove, { passive: false });
-  root.addEventListener("keyup", handleMouseMoveEnd);
-  root.addEventListener("touchend", handleMouseMoveEnd);
   root.addEventListener("mousedown", () => {
     root.addEventListener("mousemove", handleMouseMove);
   });
   for (const event of ["mouseup", "mouseleave"] as const) {
     root.addEventListener(event, () => {
       root.removeEventListener("mousemove", handleMouseMove);
-      handleMouseMoveEnd();
     });
+  }
+  for (const event of ["keyup", "mouseup", "mouseleave", "touchend"] as const) {
+    root.addEventListener(event, handleMouseMoveEnd);
   }
   root.appendChild(canvas);
   Object.assign(root.style, { overflow: "hidden", overscrollBehavior: "none" });
