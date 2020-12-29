@@ -10,6 +10,8 @@ import {
   WebGLRenderer,
 } from "three";
 import randomInt from "./randomInt";
+import keyPosition from "./keyPosition";
+import keyLayouts from "./config/keyLayouts";
 
 const root = document.body;
 const scene = new Scene();
@@ -65,32 +67,6 @@ function initPanels(panels: Mesh<PlaneGeometry, MeshBasicMaterial>[]) {
   }
 }
 
-const layouts = {
-  default: [
-    `\` 1 2 3 4 5 6 7 8 9 0 - = Backspace`,
-    `Tab q w e r t y u i o p [ ] \\`,
-    `CapsLock a s d f g h j k l ; ' Enter`,
-    `Shift z x c v b n m , . /`,
-  ],
-  shift: [
-    `~ ! @ # $ % ^ & * ( ) _ + Backspace`,
-    `Tab Q W E R T Y U I O P { } |`,
-    `CapsLock A S D F G H J K L : " Enter`,
-    `Shift Z X C V B N M < > ?`,
-  ],
-} as const;
-
-function position(
-  layout: readonly string[],
-  key: string
-): [number, number] | [] {
-  const [x, y] = layout
-    .map((row) => row.split(" ").indexOf(key))
-    .flatMap((x, y) => (x >= 0 ? [x, y] : []));
-
-  return x >= 0 ? [x, y] : [];
-}
-
 function handleKeydown({ key }: KeyboardEvent) {
   if (key === " ") {
     scene.clear();
@@ -99,8 +75,8 @@ function handleKeydown({ key }: KeyboardEvent) {
   }
 
   const [x = randomInt(grid.colum - 1), y = randomInt(grid.row - 1)] = [
-    ...position(layouts.default, key),
-    ...position(layouts.shift, key),
+    ...keyPosition(keyLayouts.default, key),
+    ...keyPosition(keyLayouts.shift, key),
   ];
 
   const offset = () => Math.random() - 0.5;
