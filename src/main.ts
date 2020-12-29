@@ -9,7 +9,7 @@ import {
   Vector2,
   WebGLRenderer,
 } from "three";
-import { Synth } from "tone";
+import { Oscillator } from "tone";
 import randomInt from "./randomInt";
 import keyPosition from "./keyPosition";
 import keyLayouts from "./config/keyLayouts";
@@ -20,16 +20,17 @@ const scene = new Scene();
 const camera = new PerspectiveCamera();
 const grid = { colum: 14, row: 4 } as const;
 const mouse = new Vector2(NaN, NaN);
-const panels = Array.from({ length: grid.colum * grid.row }, () => {
+const panels = Array.from({ length: grid.colum * grid.row }, (_, i) => {
   const geometry = new PlaneGeometry();
   const material = new MeshBasicMaterial({ opacity: 0 });
   const mesh = new Mesh(geometry, material);
+  const note = `${"CDEFGAB"[i % 7]}${Math.floor(i / 7)}`;
+  mesh.userData.osc = new Oscillator(note, "square").toDestination();
   return mesh;
 });
 const renderer = new WebGLRenderer();
 const canvas = renderer.domElement;
 const raycaster = new Raycaster();
-const synth = new Synth({ oscillator: { type: "square" } }).toDestination();
 
 function render() {
   renderer.render(scene, camera);
@@ -37,6 +38,11 @@ function render() {
 
 function vibrate() {
   if ("vibrate" in navigator) navigator.vibrate(100);
+}
+
+function tone(osc: Oscillator) {
+  osc.start();
+  osc.stop("+0.05");
 }
 
 function drawRect() {
@@ -47,7 +53,7 @@ function drawRect() {
   vibrate();
   try {
     // FIXME: Error: Start time must be strictly greater than previous start time.
-    synth.triggerAttackRelease("C4", "16n");
+    tone(intersect.object.userData.osc);
   } catch {}
 
   const color = pallet[randomInt(pallet.length - 1)];
@@ -102,7 +108,7 @@ function adjustPanelSize() {
     panel.scale.set(width, height, 1);
     Object.assign(panel.position, {
       x: width * ((i % grid.colum) - (grid.colum - 1) / 2),
-      y: height * (-Math.floor(i / grid.colum) + (grid.row - 1) / 2),
+      y: height * (Math.floor(i / grid.colum) - (grid.row - 1) / 2),
     });
   }
 }
