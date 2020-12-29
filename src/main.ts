@@ -35,11 +35,16 @@ function render() {
   renderer.render(scene, camera);
 }
 
+function vibrate() {
+  if ("vibrate" in navigator) navigator.vibrate(100);
+}
+
 function drawRect() {
   raycaster.setFromCamera(mouse, camera);
   const [intersect] = raycaster.intersectObjects(panels);
   if (!intersect) return;
 
+  vibrate();
   try {
     // FIXME: Error: Start time must be strictly greater than previous start time.
     synth.triggerAttackRelease("C4", "16n");
