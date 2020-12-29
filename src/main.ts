@@ -46,6 +46,8 @@ function drawRect() {
   Object.assign(mesh.position, intersect.point);
   scene.add(mesh);
   render();
+  // NOTE: 1度だけだと正しく表示されないことがあるのでもう一度renderする。原因よくわからない。
+  window.requestAnimationFrame(render);
 }
 
 function handleKeydown({ key }: KeyboardEvent) {
