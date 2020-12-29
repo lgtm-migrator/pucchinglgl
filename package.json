@@ -8,7 +8,8 @@
   "license": "MIT",
   "devDependencies": {
     "snowpack": "^2.18.5",
-    "three": "^0.124.0"
+    "three": "^0.124.0",
+    "tone": "^14.7.58"
   },
   "scripts": {
     "dev": "snowpack dev",

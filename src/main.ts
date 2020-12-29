@@ -9,6 +9,7 @@ import {
   Vector2,
   WebGLRenderer,
 } from "three";
+import { Synth } from "tone";
 import randomInt from "./randomInt";
 import keyPosition from "./keyPosition";
 import keyLayouts from "./config/keyLayouts";
@@ -28,6 +29,7 @@ const panels = Array.from({ length: grid.colum * grid.row }, () => {
 const renderer = new WebGLRenderer();
 const canvas = renderer.domElement;
 const raycaster = new Raycaster();
+const synth = new Synth({ oscillator: { type: "square" } }).toDestination();
 
 function render() {
   renderer.render(scene, camera);
@@ -38,6 +40,7 @@ function drawRect() {
   const [intersect] = raycaster.intersectObjects(panels);
   if (!intersect) return;
 
+  synth.triggerAttackRelease("C4", "16n");
   const color = pallet[randomInt(pallet.length - 1)];
   const geometry = new PlaneGeometry(1, 1);
   const material = new MeshBasicMaterial({ color });
