@@ -71,6 +71,7 @@ function handleMouseMove(event: { clientX: number; clientY: number }) {
 }
 
 function handleTouchmove(event: TouchEvent) {
+  event.preventDefault();
   [...event.touches].map(handleMouseMove);
 }
 
@@ -107,7 +108,7 @@ function setup() {
 
 function main() {
   renderer.setSize(window.innerWidth, window.innerHeight);
-  Object.assign(canvas.style, { width: "100vw", height: "100vh" });
+  Object.assign(canvas.style, { width: "100%", height: "100%" });
   root.addEventListener("keydown", handleKeydown);
   root.addEventListener("touchmove", handleTouchmove);
   root.addEventListener("keyup", handleMouseMoveEnd);
@@ -122,6 +123,7 @@ function main() {
     });
   }
   root.appendChild(canvas);
+  Object.assign(root.style, { overflow: "hidden", overscrollBehavior: "none" });
   window.addEventListener("resize", adjustCanvasSize);
   setup();
 }
