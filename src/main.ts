@@ -42,7 +42,8 @@ function drawRect() {
   const geometry = new PlaneGeometry(1, 1);
   const material = new MeshBasicMaterial({ color });
   const mesh = new Mesh(geometry, material);
-  mesh.scale.set(0.1, 0.1, 1);
+  const offset = () => 0.05 * (Math.random() - 0.5);
+  mesh.scale.set(0.075 + offset(), 0.075 + offset(), 0);
   Object.assign(mesh.position, intersect.point);
   scene.add(mesh);
   render();
@@ -66,8 +67,9 @@ function handleKeydown({ key }: KeyboardEvent) {
 }
 
 function handleMouseMove(event: { clientX: number; clientY: number }) {
-  mouse.x = (event.clientX / canvas.clientWidth) * 2 - 1;
-  mouse.y = -(event.clientY / canvas.clientHeight) * 2 + 1;
+  const offset = () => 0.2 * (Math.random() - 0.5);
+  mouse.x = (event.clientX / canvas.clientWidth) * 2 - 1 + offset();
+  mouse.y = -(event.clientY / canvas.clientHeight) * 2 + 1 + offset();
 
   drawRect();
 }
