@@ -91,7 +91,8 @@ function adjustPanelSize() {
   }
 }
 
-function adjustCanvasSize() {
+function adjustRendererSize() {
+  renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = canvas.clientWidth / canvas.clientHeight;
   camera.updateProjectionMatrix();
   adjustPanelSize();
@@ -103,11 +104,10 @@ function setup() {
   scene.clear();
   scene.add(...panels);
   camera.position.z = 1;
-  adjustCanvasSize();
+  adjustRendererSize();
 }
 
 function main() {
-  renderer.setSize(window.innerWidth, window.innerHeight);
   Object.assign(canvas.style, { width: "100%", height: "100%" });
   root.addEventListener("keydown", handleKeydown);
   root.addEventListener("touchstart", handleTouchmove, { passive: false });
@@ -125,7 +125,7 @@ function main() {
   }
   root.appendChild(canvas);
   Object.assign(root.style, { overflow: "hidden", overscrollBehavior: "none" });
-  window.addEventListener("resize", adjustCanvasSize);
+  window.addEventListener("resize", adjustRendererSize);
   setup();
 }
 
