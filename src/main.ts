@@ -110,7 +110,8 @@ function main() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   Object.assign(canvas.style, { width: "100%", height: "100%" });
   root.addEventListener("keydown", handleKeydown);
-  root.addEventListener("touchmove", handleTouchmove);
+  root.addEventListener("touchstart", handleTouchmove, { passive: false });
+  root.addEventListener("touchmove", handleTouchmove, { passive: false });
   root.addEventListener("keyup", handleMouseMoveEnd);
   root.addEventListener("touchend", handleMouseMoveEnd);
   root.addEventListener("mousedown", () => {
