@@ -12,6 +12,7 @@ import {
 import randomInt from "./randomInt";
 import keyPosition from "./keyPosition";
 import keyLayouts from "./config/keyLayouts";
+import pallet from "./config/pallet";
 
 const root = document.body;
 const scene = new Scene();
@@ -37,9 +38,7 @@ function drawRect() {
   const [intersect] = raycaster.intersectObjects(panels);
   if (!intersect) return;
 
-  const c16s = ["red", "green", "blue", "cyan", "magenta", "yellow"];
-  const c16 = c16s[randomInt(c16s.length - 1)];
-  const color = new Color(c16);
+  const color = pallet[randomInt(pallet.length - 1)];
   const geometry = new PlaneGeometry(1, 1);
   const material = new MeshBasicMaterial({ color });
   const mesh = new Mesh(geometry, material);
