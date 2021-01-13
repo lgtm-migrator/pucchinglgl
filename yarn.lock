@@ -18,9 +18,9 @@ automation-events@^3.0.2:
     tslib "^2.0.3"
 
 esbuild@^0.8.7:
-  version "0.8.26"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.26.tgz#a85491617ebd2bd35ca4bf479239487eb6819d71"
-  integrity sha512-u3MMHOOumdWoAKF+073GHPpzvVB2cM+y9VD4ZwYs1FAQ6atRPISya35dbrbOu/mM68mQ42P+nwPzQVBTfQhkvQ==
+  version "0.8.31"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.31.tgz#c21e7adb3ad283c951a53de7ad64a5ae2df2ed34"
+  integrity sha512-7EIU0VdUxltwivjVezX3HgeNzeIVR1snkrAo57WdUnuBMykdzin5rTrxwCDM6xQqj0RL/HjOEm3wFr2ijHKeaA==
 
 fsevents@^2.2.0:
   version "2.3.1"
@@ -33,22 +33,22 @@ regenerator-runtime@^0.13.4:
   integrity sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==
 
 snowpack@^3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/snowpack/-/snowpack-3.0.2.tgz#ff1418892c1a0af9c1eb62c8c30537f4ce1057ea"
-  integrity sha512-yjL+QejITOAUZQNBcgm/gOFBy5MMrnakmG9Oi9a8Mh2XEKTYQupwgWgsiYsztO/2S1ZZKhGF8pV+9IdRExNlkg==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/snowpack/-/snowpack-3.0.3.tgz#46b72fbb18cee0c1bc52e7a4be77764bde7a025e"
+  integrity sha512-nzvGZaB3H5xfZksg3Py3r5iDyEdtLwG9yLhhmrNJaN537qXsuUt6FKgzW2nD9dMkgjVpEwpAkv7VZ/3sL6H4Bw==
   dependencies:
     esbuild "^0.8.7"
   optionalDependencies:
     fsevents "^2.2.0"
 
 standardized-audio-context@^25.0.4:
-  version "25.1.6"
-  resolved "https://registry.yarnpkg.com/standardized-audio-context/-/standardized-audio-context-25.1.6.tgz#c1908fe6b8fe221cc2836c9873573474f7992ad0"
-  integrity sha512-iHvPiwbDctxpmP9sufnADBeiBpYc8km6i53TFGVGkc5usBmAJ8YNhATXXrSFZYR4MGxIImZGWCCH4LrPatPFrQ==
+  version "25.1.8"
+  resolved "https://registry.yarnpkg.com/standardized-audio-context/-/standardized-audio-context-25.1.8.tgz#a8458abd65980780bfc3cc114c3888dd0b55d5cd"
+  integrity sha512-/thEybIkw3VsoUkxkivjdWzedd9MrEsuTZ8IlVGcu1Xhm7nKGgiusFhRdp57wI+5DihkXn9NIWIyysbYA/6w2w==
   dependencies:
     "@babel/runtime" "^7.12.5"
     automation-events "^3.0.2"
-    tslib "^2.0.3"
+    tslib "^2.1.0"
 
 three@^0.124.0:
   version "0.124.0"
@@ -63,7 +63,7 @@ tone@^14.7.58:
     standardized-audio-context "^25.0.4"
     tslib "^2.0.1"
 
-tslib@^2.0.1, tslib@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
-  integrity sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ==
+tslib@^2.0.1, tslib@^2.0.3, tslib@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
+  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
