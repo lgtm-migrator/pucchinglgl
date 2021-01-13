@@ -3,11 +3,9 @@
     "clean": true
   },
   "mount": { "src": { "url": "/" } },
-  "experiments": {
-    "optimize": {
-      "bundle": true,
-      "minify": true,
-      "target": "esnext"
-    }
+  "optimize": {
+    "bundle": true,
+    "minify": true,
+    "target": "esnext"
   }
 }
