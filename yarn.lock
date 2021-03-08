@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@babel/runtime@^7.12.5", "@babel/runtime@^7.13.8":
-  version "7.13.8"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.8.tgz#cc886a85c072df1de23670dc1aa59fc116c4017c"
-  integrity sha512-CwQljpw6qSayc0fRG1soxHAKs1CnQMOChm4mlQP6My0kf9upVGizj/KhlTTgyUnETmHpcUXjaluNAkteRFuafg==
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.13.9":
+  version "7.13.9"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.9.tgz#97dbe2116e2630c489f22e0656decd60aaa1fcee"
+  integrity sha512-aY2kU+xgJ3dJ1eU6FMB9EH8dIe8dmusF1xEku52joLvw6eAFN0AI+WxCLDnpev2LEejWBAy2sBvBOBAjI3zmvA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
 automation-events@^3.0.4:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/automation-events/-/automation-events-3.0.6.tgz#73e2da6b2f3e101d3ad6e97b22e22b6805c9a353"
-  integrity sha512-nj4tBC0jgzYCY8Qq4Z3ljy/eDLeWnzSeBmd/Eq0lUuBvgm9GtDJoIds+w3mSlh6WH3dDEDm/lmr5lH6/mfgVWQ==
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/automation-events/-/automation-events-3.0.7.tgz#5c08b78a16b84bc5eca57fd78476df029c9a8af7"
+  integrity sha512-Vf6MlM59AB/JesRlfnvSyuOVznFFCVaygBwuKiXUYXHxuJ2kxFL3X2Ym3wgl5FQsRhAuj6DhTdvQDtNokkL7xQ==
   dependencies:
-    "@babel/runtime" "^7.13.8"
+    "@babel/runtime" "^7.13.9"
     tslib "^2.1.0"
 
 big-integer@^1.6.7:
@@ -39,9 +39,9 @@ default-browser-id@^2.0.0:
     untildify "^2.0.0"
 
 esbuild@^0.8.7:
-  version "0.8.53"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.53.tgz#b408bb0ca1b29dab13d8bbf7d59f59afe6776e86"
-  integrity sha512-GIaYGdMukH58hu+lf07XWAeESBYFAsz8fXnrylHDCbBXKOSNtFmoYA8PhSeSF+3/qzeJ0VjzV9AkLURo5yfu3g==
+  version "0.8.56"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.56.tgz#9c7c3d6e614db7367afa348adb0ab287c296735e"
+  integrity sha512-PTMdAWK3JI2MNW811znGssGP5GR44tQPr++VQ1rPP0n8Z1cTKbCPD3S/kXPLr3ZZDIwAaVm08fuFym6Rp8l/0A==
 
 fsevents@^2.2.0, fsevents@~2.3.1:
   version "2.3.2"
@@ -145,9 +145,9 @@ standardized-audio-context@^25.1.8:
     tslib "^2.1.0"
 
 three@^0.126.0:
-  version "0.126.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.126.0.tgz#924818341cd4441ef247e3cbf236f6160b90a216"
-  integrity sha512-/MecvboUefStCkUfXLImoJxthN+FoLPcEP7pz1r1Dd9i8BPGGuj+S1sOPRvW4Z+ViZjP2oWWm1inNC/MT52ybA==
+  version "0.126.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.126.1.tgz#cf4e4e52060fd952f6f0d5440cbd422c66bc4be7"
+  integrity sha512-eOEXnZeE1FDV0XgL1u08auIP13jxdN9LQBAEmlErYzMxtIIfuGIAZbijOyookALUhqVzVOx0Tywj6n192VM+nQ==
 
 tone@^14.7.58:
   version "14.7.77"
