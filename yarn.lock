@@ -10,9 +10,9 @@
     "@babel/highlight" "^7.14.5"
 
 "@babel/helper-validator-identifier@^7.14.5":
-  version "7.14.8"
-  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.14.8.tgz#32be33a756f29e278a0d644fa08a2c9e0f88a34c"
-  integrity sha512-ZGy6/XQjllhYQrNw/3zfWRwZCTVSiBLZ9DHVZxn9n2gip/7ab8mv2TWlKPIBk26RwedCBoWdjLmn+t9na2Gcow==
+  version "7.14.9"
+  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.14.9.tgz#6654d171b2024f6d8ee151bf2509699919131d48"
+  integrity sha512-pQYxPY0UP6IHISRitNe8bsijHex4TWZXi2HwKVsjPiltzlhse2znVcm9Ace510VT1kxIHjGJCZZQBX2gJDbo0g==
 
 "@babel/highlight@^7.14.5":
   version "7.14.5"
@@ -23,7 +23,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8":
+"@babel/runtime@^7.14.8":
   version "7.14.8"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.8.tgz#7119a56f421018852694290b9f9148097391b446"
   integrity sha512-twj3L8Og5SaCRCErB4x4ajbvBIVV77CGeFglHpeg5WC5FF8TZzBWXtTJ4MqaD9QszLYTtr+IsaAL2rEUevb+eg==
@@ -260,9 +260,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "16.4.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.7.tgz#f7afa78769d4b477f5092d7c3468e2e8653d779c"
-  integrity sha512-aDDY54sst8sx47CWT6QQqIZp45yURq4dic0+HCYfYNcY5Ejlb/CLmFnRLfy3wQuYafOeh3lB/DAKaqRKBtcZmA==
+  version "16.4.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.10.tgz#e57e2a54fc6da58da94b3571b1cb456d39f88597"
+  integrity sha512-TmVHsm43br64js9BqHWqiDZA+xMtbUpI1MBIA0EyiBmoV9pcEYFOSdj5fr6enZNfh4fChh+AGOLIzGwJnkshyQ==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -400,12 +400,12 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-automation-events@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/automation-events/-/automation-events-4.0.3.tgz#c529c1b4a39bc88cd483e00c5bc7200d62442bb0"
-  integrity sha512-FVIO4QTVi4u4ORRMszcXhoUj1U8rtgIVCbMKgw1i/zlcbEn1MICbhfquDJiA1QZgh0KysUGuxrn2JeloH04drQ==
+automation-events@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/automation-events/-/automation-events-4.0.5.tgz#76474d8acf886e547abb5bcd795b3f02943806ef"
+  integrity sha512-yoXLUAHiK6JQgPSsMRdMFxE93RkgK+M4SX9LD8i2zCKn7SmhNxMKzD7N99xSLW1AuG4K5GYHcxLyQQf51VQUeA==
   dependencies:
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.14.8"
     tslib "^2.3.0"
 
 aws-sign2@~0.7.0:
@@ -2585,12 +2585,12 @@ ssri@^8.0.0, ssri@^8.0.1:
     minipass "^3.1.1"
 
 standardized-audio-context@^25.1.8:
-  version "25.3.0"
-  resolved "https://registry.yarnpkg.com/standardized-audio-context/-/standardized-audio-context-25.3.0.tgz#790bf437b3d950c40124a3721c272a34e348238f"
-  integrity sha512-ONDd+xjLruBVeNS/QCrVivVJPWID7JnZr0fIS1uV1VybAPmgVdK1g5Zx+trUFje1Es+GTC5wCb3JL464hJWagw==
+  version "25.3.2"
+  resolved "https://registry.yarnpkg.com/standardized-audio-context/-/standardized-audio-context-25.3.2.tgz#4c64ac3b0f065ba45827c6bacaa6027f1840ad2b"
+  integrity sha512-v6W1OlgpqMSNbTXO8g6/BIwprAydJXDKJ1s9WbZHmicXB0CyYCqlCpVcnZdC2BRc5mboAsiT0IV67+EY92uZxA==
   dependencies:
     "@babel/runtime" "^7.14.8"
-    automation-events "^4.0.3"
+    automation-events "^4.0.5"
     tslib "^2.3.0"
 
 string-hash@^1.1.1:
@@ -2673,9 +2673,9 @@ tar@^6.0.2, tar@^6.1.0:
     yallist "^4.0.0"
 
 three@^0.131.0:
-  version "0.131.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.131.0.tgz#4e6e66042a0c0b6d2c078dc6be31811eade66c04"
-  integrity sha512-s05qedtr8qDG7L7MiUpFNboGWSd2xzKeSRd5iQEOjun5DD5ptRQlNsA6wKTbVCdOGbQuUH4kVXerTeznDlBjkw==
+  version "0.131.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.131.1.tgz#c7d35213a0ec5c3ee28316221ecdf2c18d1140a0"
+  integrity sha512-1vojiLBfH7e2GZDEzFBfmzU0b/5uraxdg630PcVCRdzgGOttGe6HmG+n71lLCZZnPOxU9f7UVPiSkKPMsyiB/A==
 
 to-regex-range@^5.0.1:
   version "5.0.1"
